@@ -1,19 +1,29 @@
-# ForemanSlack
-
-*Introdction here*
+# Foreman Slack
+**WIP**
+A plugin with sends events from Foreman to a Slack channel.
+It currently sends only "host is built" event. More is planned.
 
 ## Installation
 
 See [How_to_Install_a_Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Install_a_Plugin)
 for how to install Foreman plugins
 
+### SLACK WEBHOOK_URL
+To get WEBHOOK_URL you need:
+    
+1. Go to https://slack.com/apps/A0F7XDUAZ-incoming-webhooks
+2. Choose your team, press configure
+3. In configurations press add configuration
+4. Choose channel, press "Add Incoming WebHooks integration"
+
 ## Usage
 
-*Usage here*
+Once you've got a Slack Webhook URL, you can add it in /settings, under the Slack tab.
 
 ## TODO
 
-*Todo list here*
+- [ ] Add 'Puppet error state' event
+- [ ] Add tests
 
 ## Contributing
 
@@ -21,7 +31,7 @@ Fork and send a Pull Request. Thanks!
 
 ## Copyright
 
-Copyright (c) *year* *your name*
+Copyright (c) *2016* *Shlomi Zadok*
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -3,15 +3,15 @@ module ForemanSlack
     extend ActiveSupport::Concern
 
     included do
-      alias_methods_chain :send_built_notification, :slack
+      alias_method_chain :send_built_notification, :slack
     end
 
     private
 
     def send_built_notification_with_slack
-      send_built_notification_without_slack
       slack = ForemanSlack::SlackNotify.new
       slack.notify(_('%s has been built!') % name)
+      send_built_notification_without_slack
     end
   end
 end

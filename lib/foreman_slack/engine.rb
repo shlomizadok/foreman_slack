@@ -16,18 +16,18 @@ module ForemanSlack
 
         # Add permissions
         security_block :foreman_slack do
-          permission :view_foreman_slack, :'foreman_slack/hosts' => [:new_action]
+          permission :test_foreman_slack, :'foreman_slack/slack_tests' => [:test_slack]
         end
 
         # Add a new role called 'Discovery' if it doesn't exist
-        role 'ForemanSlack', [:view_foreman_slack]
+        role 'ForemanSlack', [:test_foreman_slack]
 
         # add menu entry
-        menu :top_menu, :template,
-             url_hash: { controller: :'foreman_slack/hosts', action: :new_action },
-             caption: 'ForemanSlack',
-             parent: :hosts_menu,
-             after: :hosts
+        menu :admin_menu, :template,
+             url_hash: { controller: :'foreman_slack/slack_tests', action: :test_slack },
+             caption: 'Test Slack connection',
+             parent: :administer_menu,
+             after: :settings
 
         # add dashboard widget
         widget 'foreman_slack_widget', name: N_('Foreman plugin template widget'), sizex: 4, sizey: 1

@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'new_action', to: 'foreman_slack/hosts#new_action'
+  get 'slack_test', to: 'foreman_slack/slack_tests#test_slack'
 end
