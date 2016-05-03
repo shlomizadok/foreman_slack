@@ -1,6 +1,6 @@
 require 'test_plugin_helper'
 
-class ForemanPluginTemplateTest < ActiveSupport::TestCase
+class ForemanSlackTest < ActiveSupport::TestCase
   setup do
     User.current = User.find_by_login 'admin'
   end
