@@ -9,8 +9,10 @@ module ForemanSlack
     private
 
     def send_built_notification_with_slack
-      slack = ForemanSlack::SlackNotify.new
-      slack.notify(_('%s has been built!') % name)
+      if Setting[:notify_slack_host_built]
+        slack = ForemanSlack::SlackNotify.new
+        slack.notify(_('%s has been built!') % name)
+      end
       send_built_notification_without_slack
     end
   end
