@@ -22,7 +22,7 @@ Once you've got a Slack Webhook URL, you can add it in /settings, under the Slac
 
 ## TODO
 
-- [ ] Add 'Puppet error state' event
+- [x] Add 'Puppet error state' event
 - [ ] Add tests
 
 ## Contributing
