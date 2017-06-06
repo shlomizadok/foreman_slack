@@ -5,8 +5,8 @@ It currently sends only "host is built" event. More is planned.
 
 ## Installation
 
-See [How_to_Install_a_Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Install_a_Plugin)
-for how to install Foreman plugins
+Foreman Slack can be installed only as a gem.
+See [How to install a Plugin](https://theforeman.org/plugins/#2.3AdvancedInstallationfromGems) for how to install on Foreman.
 
 ### SLACK WEBHOOK_URL
 To get WEBHOOK_URL you need:
